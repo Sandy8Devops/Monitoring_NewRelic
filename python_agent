@@ -1,0 +1,32 @@
+Once Hosts are identified in Nrelic
+2nd step is to add Application in the Nrelic
+
+There are specific Agent 
+https://docs.newrelic.com/docs/apm/agents/python-agent/installation/standard-python-agent-install/
+
+step:1
+pip install newrelic
+
+
+step:2
+Need to generate Generate the agent configuration file by running the command:
+using the licence key
+
+Licene Key for the account is seen in 
+
+
+Setup a Project
+
+$ sudo apt install python3-virtualenv //setup evn
+$ virtualenv -p python3 PythonDevEnv //create virtual env
+$ source PythonDevEnv/bin/activate //use env
+
+will change the prompt..
+devops@devops:~$ source PythonDevEnv/bin/activate
+(PythonDevEnv) devops@devops:~$  
+
+Start.. playting..
+
+
+
+$ mdkir PythonProject_1

@@ -1,0 +1,27 @@
+create an account on newrelic
+
+ie: sandydevops8@gmail.com
+....
+
+
+Will be in portal
+----
+select your stack
+
+select the language for application monitoring (python or any )
+OS
+etc..
+
+Agent config in App Server
+-----
+So one the accoun ti sready..
+need to setup agent in App server where the data will be posted to new relic account
+
+code is generated to setup agent referencing to account just created
+id:3790592 
+
+ie:
+curl -Ls https://download.newrelic.com/install/newrelic-cli/scripts/install.sh 
+| bash && sudo NEW_RELIC_API_KEY=NRAK-42PBXVS3V7OHHSO5UPVRW4K5XIX NEW_RELIC_ACCOUNT_ID=3790592 
+/usr/local/bin/newrelic install -n infrastructure-agent-installer
+

@@ -69,6 +69,11 @@ insside PythonProject/PyApp1 folder..
 
 Finally data is seee in NewRelic..
 
+App & Services
+  > PyApp1  //will be seen
+  
+ Can Explore on PyApp1
+
 
 Important Thinkg
 --

@@ -20,8 +20,67 @@ need to setup agent in App server where the data will be posted to new relic acc
 code is generated to setup agent referencing to account just created
 id:3790592 
 
+Go to the Linux server and hit the above command
+It will setup NewRelic agent there and an URL will be shown 
+at last for monitoring purpose
+
 ie:
 curl -Ls https://download.newrelic.com/install/newrelic-cli/scripts/install.sh 
 | bash && sudo NEW_RELIC_API_KEY=NRAK-42PBXVS3V7OHHSO5UPVRW4K5XIX NEW_RELIC_ACCOUNT_ID=3790592 
 /usr/local/bin/newrelic install -n infrastructure-agent-installer
 
+Starting installation.
+Installing New Relic CLI v0.62.0
+Installing to /usr/local/bin using sudo
+[sudo] password for devops: 
+
+ _   _                 ____      _ _
+| \ | | _____      __ |  _ \ ___| (_) ___
+|  \| |/ _ \ \ /\ / / | |_) / _ | | |/ __|
+| |\  |  __/\ V  V /  |  _ |  __| | | (__
+|_| \_|\___| \_/\_/   |_| \_\___|_|_|\___|
+
+Welcome to New Relic. Let's set up full stack observability for your environment.
+	
+◢ Connecting to New Relic Platform..
+
+Installing New Relic Infrastructure Agent
+
+==> Installing Infrastructure Agent
+Get:1 https://packages.grafana.com/oss/deb stable InRelease [5,984 B]
+Hit:2 http://us.archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 https://packages.grafana.com/enterprise/deb stable InRelease [5,984 B]
+
+Created symlink /etc/systemd/system/multi-user.target.wants/newrelic-infra.service → /etc/systemd/system/newrelic-infra.service.
+Running agent status check attempt...
+Agent status check ok.
+✔ Installing Infrastructure Agent
+   Installed 
+
+  New Relic installation complete 
+
+  --------------------
+  Installation Summary
+
+  ✔  Infrastructure Agent  (installed)  
+
+  View your data at the link below:
+  ⮕  https://one.newrelic.com/redirect/entity/Mzc5MDU5MnxJTkZSQXxOQXw1NDk5Njg1NjE0NjA4MjQ1NTc0
+
+will be shown...
+
+visit the above link see the dash baord for server devops, where 
+
+
+eg:
+Disk usage
+Since 30 minutes ago
+
+Device
+Used %
+/dev/sda3
+55.627
+
+So till here Host is added
+
+Next: Application will be created on host and that will be set on Monitoring....

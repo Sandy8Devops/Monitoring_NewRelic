@@ -27,6 +27,53 @@ devops@devops:~$ source PythonDevEnv/bin/activate
 
 Start.. playting..
 
+Once in the VirtualEnv , install newrelic
+
+(PythonDevEnv) devops@devops:~/Python_Projects$ pip install newrelic
+Collecting newrelic
+  Downloading newrelic-8.5.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (746 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 747.0/747.0 KB 7.7 MB/s eta 0:00:00
+Installing collected packages: newrelic
+Successfully installed newrelic-8.5.0
+(PythonDevEnv) devops@devops:~/Python_Projects$ 
 
 
-$ mdkir PythonProject_1
+This is the main step
+Download the agent configuration file and put it in your application’s root directory.
+Need to download the config file and put in in App root
+
+if you have 5 app, need to put that in all 5 app..
+
+Lets create pyApp1 and PyApp2 and put the downloaded file there..
+Its an newrelic.ini file , download and copy to your app
+
+download file from local to remote using ssh
+--------
+$ scp newrelic.ini devops@192.168.1.95:/tmp
+devops@192.168.1.95's password: 
+newrelic.ini                                                                                               100% 9186     6.2MB/s   00:00    
+
+now, copy the file in PyApp2 and see if app is refelected 
+
+(PythonDevEnv) devops@devops:/tmp$ cp newrelic.ini ~/Python_Projects/PyApp1/
+
+
+
+(PythonDevEnv) devops@devops:~/Python_Projects$ ls
+PyApp1  PyApp2
+(PythonDevEnv) devops@devops:~/Python_Projects$ 
+
+eg:
+PyApp1/app1.py , where newrelic.ini is set at PyApp1 as app name 
+insside PythonProject/PyApp1 folder..
+
+Finally data is seee in NewRelic..
+
+
+Important Thinkg
+--
+App name must match in newrelic.ini and app name
+It must be web app, App should be in running state
+
+
+
